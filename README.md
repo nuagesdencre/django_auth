@@ -4,3 +4,4 @@
 - Django 1.11
 - Authentication components:
     - Login, Logout, Registration, User Profile
+********
