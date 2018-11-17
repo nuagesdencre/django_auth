@@ -40,3 +40,8 @@ def login(request):
         login_form = UserLoginForm()
     return render(request, "login.html", {"login_form": login_form})
     
+def register(request):
+    """
+    Render the registration page
+    """
+    return render(request, 'registration.html')
