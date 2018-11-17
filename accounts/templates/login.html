@@ -23,6 +23,11 @@
         </li>
     </nav>
     <hr>
+    
+    <form method="POST">
+         {% csrf_token %} {{ login_form }}
+        <button type="submit">Login</button>
+    </form>
     {% if messages %}
     <div>
         {% for message in messages %}
@@ -30,9 +35,5 @@
         {% endfor %}
     </div>
     {% endif %}
-     
-    <form method="POST">
-        {{ login_form }}
-    </form>
 </body>
 </html>
