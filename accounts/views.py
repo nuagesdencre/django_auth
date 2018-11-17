@@ -29,8 +29,8 @@ def login(request):
             messages.success(request, "You are now logged in")
             if user:
                 auth.login(user=user, request=request)
-                else:
-                    login_form.add_error(None, "Your username or password is incorrect")
+            else:
+                login_form.add_error(None, "Your username or password is incorrect")
     else:
         login_form = UserLoginForm()
     return render(request, "login.html", {"login_form": login_form})
