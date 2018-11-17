@@ -2,7 +2,9 @@
 {% block page_title %}Registration Page {% endblock %}
 {% block page_heading %}User Registration {% endblock %}
 {% block content%}
-Registration form will be here.
+    <form method="POST">
+         {% csrf_token %} {{ registration_form.as_p }}
+        <button type="submit">Register</button>
+    </form>
 <p>Already registered? <a href="{% url 'login' %}">Sign in.</a></p>
-  
 {% endblock %}
