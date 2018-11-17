@@ -15,13 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from accounts.views import index, logout, login, register, user_profile
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name ="index"),
-    url(r'^accounts/login/$', login, name ="login"),
-    url(r'^accounts/logout/$', logout, name="logout"),
-    url(r'^accounts/register/$', register, name="register"),
-    url(r'^accounts/user_profile/$', user_profile, name ="user_profile")
+    url(r'^admin/', admin.site.urls)
+    
 ]
